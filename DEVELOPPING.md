@@ -10,6 +10,14 @@ on your environment:
   * drush
   * Latest dev release of Drupal 8.x.
 
+## 🚔 Check Javascript best practices
+
+You need to run `yarn` before using ESLint. Then run the commmand:
+
+  ```
+  $ ./node_modules/.bin/eslint ./
+  ```
+
 ## 🚔 Check Drupal coding standards & Drupal best practices
 
 You need to run composer before using PHPCS. Then register the Drupal
