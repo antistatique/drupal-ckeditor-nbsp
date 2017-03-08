@@ -13,7 +13,7 @@
     icons: 'nbsp',
     hidpi: true,
 
-    beforeInit: function(editor) {
+    beforeInit: function (editor) {
       editor.addContentsCss(this.path + 'css/ckeditor.nbsp.css');
     },
     init: function (editor) {

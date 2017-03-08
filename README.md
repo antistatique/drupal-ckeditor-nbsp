@@ -6,14 +6,15 @@ into the content by pressing Ctrl+Space or using the provided button.
 ## Uses
 
 During content creation the author may add a non-breaking space (`&nbsp;`)
-to prevents an automatic line break.
-For exemple to avoid a company’s 2-word name to be split onto 2 separate lines.
+to prevent an automatic line break.
+To avoid that a company’s 2-word name is split onto 2 separate lines.
 
-As the non-breaking space is an invisible character, they are highlighted in blue on the CKEditor.
+As the non-breaking space is an invisible character,
+they are highlighted in blue on the CKEditor.
 
 ## Installation
 
-Install the module per normal then follow the instructions
+Install the module then follow the instructions
 for installing the CKEditor plugins below.
 
 ## Configuration
