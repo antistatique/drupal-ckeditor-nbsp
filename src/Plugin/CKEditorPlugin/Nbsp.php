@@ -55,7 +55,7 @@ class Nbsp extends CKEditorPluginBase implements CKEditorPluginInterface, CKEdit
   public function getButtons() {
     return array(
       'DrupalNbsp' => array(
-        'label' => t('Non-breaking space'),
+        'label' => $this->t('Non-breaking space'),
         'image' => drupal_get_path('module', 'nbsp') . '/plugins/' . $this->getPluginId() . '/icons/' . $this->getPluginId() . '.png',
       ),
     );
