@@ -24,6 +24,11 @@ configuration page:, and for each text format/editor combo
 where you want to use NBSP, do the following:
 
 * Drag and drop the 'NBSP' button into the Active toolbar.
+* Enable filter "Cleanup NBSP markup".
+* if the "Limit allowed HTML tags and correct faulty HTML" filter is disabled
+you dont have anything to do with this text format.
+Otherwise, add the `class` attribute to `<span>` in the "allowed HTML tags"
+field (Eg. `<span class>`).
 
 ## NBSP versions
 
