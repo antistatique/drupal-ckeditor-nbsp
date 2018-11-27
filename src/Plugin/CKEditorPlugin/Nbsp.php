@@ -25,7 +25,7 @@ class Nbsp extends CKEditorPluginBase implements CKEditorPluginInterface, CKEdit
    * {@inheritdoc}
    */
   public function getDependencies(Editor $editor) {
-    return array();
+    return [];
   }
 
   /**
@@ -39,7 +39,7 @@ class Nbsp extends CKEditorPluginBase implements CKEditorPluginInterface, CKEdit
    * {@inheritdoc}
    */
   public function getConfig(Editor $editor) {
-    return array();
+    return [];
   }
 
   /**
@@ -53,12 +53,12 @@ class Nbsp extends CKEditorPluginBase implements CKEditorPluginInterface, CKEdit
    * {@inheritdoc}
    */
   public function getButtons() {
-    return array(
-      'DrupalNbsp' => array(
+    return [
+      'DrupalNbsp' => [
         'label' => $this->t('Non-breaking space'),
         'image' => drupal_get_path('module', 'nbsp') . '/plugins/' . $this->getPluginId() . '/icons/' . $this->getPluginId() . '.png',
-      ),
-    );
+      ],
+    ];
   }
 
 }

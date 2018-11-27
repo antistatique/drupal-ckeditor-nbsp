@@ -15,7 +15,11 @@ on your environment:
 You need to run `yarn` before using ESLint. Then run the commmand:
 
   ```
-  $ ./node_modules/.bin/eslint ./
+  // Run Prettier
+  yarn run prettier
+
+  // Run ESLint - Passing ruleset with more problematic rules turned off.
+  yarn run lint:core-js-passing
   ```
 
 ## 🚔 Check Drupal coding standards & Drupal best practices
