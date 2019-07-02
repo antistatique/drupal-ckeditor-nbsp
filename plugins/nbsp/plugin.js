@@ -22,7 +22,9 @@
       // Insert &nbsp; if Ctrl+Space is pressed:
       editor.addCommand("insertNbsp", {
         exec: function(editor) {
-          editor.insertHtml('<span class="nbsp">&nbsp;</span>');
+          editor.insertElement(
+            CKEDITOR.dom.element.createFromHtml('<span class="nbsp" cotenteditable="false">&nbsp;</span>')
+          )
         }
       });
       editor.setKeystroke(CKEDITOR.CTRL + 32 /* space */, "insertNbsp");
