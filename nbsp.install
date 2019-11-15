@@ -13,7 +13,7 @@ use Drupal\Core\Url;
  */
 function nbsp_install() {
   $url = Url::fromRoute('filter.admin_overview');
-  drupal_set_message(t('Non-breaking space is available for configuration under <a href="@administer-page">Administration > Configuration > Content authoring</a>', ['@administer-page' => $url->toString()]));
+  \Drupal::messenger()->addMessage(t('Non-breaking space is available for configuration under <a href="@administer-page">Administration > Configuration > Content authoring</a>', ['@administer-page' => $url->toString()]));
 }
 
 /**
