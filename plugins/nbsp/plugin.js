@@ -19,12 +19,24 @@
       editor.addContentsCss(this.path + "css/ckeditor.nbsp.css");
     },
     init: function(editor) {
-      // Insert &nbsp; if Ctrl+Space is pressed:
-      editor.addCommand("insertNbsp", {
-        exec: function(editor) {
-          editor.insertHtml('<span class="nbsp">&nbsp;</span>');
+      //Add &shy; widget
+      editor.widgets.add("insertNbsp", {
+        template: '<span class="nbsp">&nbsp;</span>',
+        draggable: false,
+        allowedContent: ['span(!nbsp)'],
+        //position cursor after widget so users can keep on typing
+        init: function(){
+          this.once( 'focus', function() {
+            var range = editor.createRange();
+            range.moveToPosition( this.wrapper, CKEDITOR.POSITION_AFTER_END );
+            range.select();
+          }, this );
+        },
+        upcast: function (element, data) {
+          return element.name == 'span' && element.hasClass('shy');
         }
       });
+      // Insert  if Ctrl+Space is pressed:
       editor.setKeystroke(CKEDITOR.CTRL + 32 /* space */, "insertNbsp");
 
       // Register the toolbar button.
