@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\filter\Kernel;
+namespace Drupal\Tests\nbsp\Kernel;
 
 use Drupal\KernelTests\KernelTestBase;
 use Drupal\filter\FilterPluginCollection;
