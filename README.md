@@ -3,6 +3,10 @@
 Minimal module to insert a non-breaking space (`&nbsp;`)
 into the content by pressing Ctrl+Space or using the provided button.
 
+|       Travis-CI        |        Downloads        |         Releases         |
+|:----------------------:|:-----------------------:|:------------------------:|
+| [![Travis](https://img.shields.io/travis/antistatique/drupal-ckeditor-nbsp.svg?style=flat-square)](https://travis-ci.org/antistatique/drupal-ckeditor-nbsp) | [![Downloads](https://img.shields.io/badge/downloads-green.svg?style=flat-square)](https://www.drupal.org/project/nbsp) | [![Latest Stable Version](https://img.shields.io/badge/release-blue.svg?style=flat-square)](https://www.drupal.org/project/nbsp/releases) |
+
 ## Uses
 
 During content creation the author may add a non-breaking space (`&nbsp;`)
@@ -32,15 +36,21 @@ field (Eg. `<span class>`).
 
 ## NBSP versions
 
-NBSP is only available for Drupal 8 !
-The module is ready to be used in Drupal 8, there are no known issues.
+The version `8.x-1.x` is not compatible with Drupal `8.8.x`.
+Drupal `8.8.x` brings some breaking change with tests and so you
+must upgrade to `8.x-2.x` version of **NBSP**.
 
-This version should work with all Drupal 8 releases, though it is always
-recommended to keep Drupal core installations up to date.
+## Which version should I use?
+
+|Drupal Core|Backerymails|
+|:---------:|:----------:|
+|8.7.x      |1.x         |
+|8.8.x      |2.x         |
+|9.x        |2.x         |
 
 ## Dependencies
 
-The Drupal 8 version of NBSP requires
+The Drupal 8 & Drupal 9 version of NBSP requires
 [Editor](https://www.drupal.org/project/editor) and
 [CKEditor](https://www.drupal.org/project/ckeditor).
 
