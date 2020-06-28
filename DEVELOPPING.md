@@ -2,6 +2,18 @@
 
 * Issues should be filed at https://www.drupal.org/project/issues/nbsp
 
+## 📦 Repositories
+
+Drupal repo
+  ```
+  git remote add drupal git@git.drupal.org:project/nbsp.git
+  ```
+
+Github repo
+  ```
+  git remote add github git@github.com:antistatique/drupal-ckeditor-nbsp.git
+  ```
+
 ## 🔧 Prerequisites
 
 First of all, you will need to have the following tools installed
