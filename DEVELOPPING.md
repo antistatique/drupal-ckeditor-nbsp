@@ -2,13 +2,48 @@
 
 * Issues should be filed at https://www.drupal.org/project/issues/nbsp
 
+## 📦 Repositories
+
+Drupal repo
+  ```
+  git remote add drupal git@git.drupal.org:project/nbsp.git
+  ```
+
+Github repo
+  ```
+  git remote add github git@github.com:antistatique/drupal-ckeditor-nbsp.git
+  ```
+
 ## 🔧 Prerequisites
 
-First of all, you need to have the following tools installed globally
-on your environment:
+First of all, you will need to have the following tools installed
+globally on your environment:
 
   * drush
   * Latest dev release of Drupal 8.x.
+  * docker
+  * docker-compose
+
+### Project bootstrap
+
+Once run, you will be able to access to your fresh installed Drupal on `localhost::8888`.
+
+    docker-compose build --pull --build-arg BASE_IMAGE_TAG=8.9 drupal
+    (get a coffee, this will take some time...)
+    docker-compose up -d drupal
+    docker-compose exec -u www-data drupal drush site-install standard --db-url="mysql://drupal:drupal@db/drupal" -y
+    
+    # You may be interesed by reseting the admin passowrd of your Docker and install the module using those cmd.
+    docker-compose exec drupal drush user:password admin admin
+    docker-compose exec drupal drush en nbsp
+
+## 🏆 Tests
+
+We use the [Docker for Drupal Contrib images](https://hub.docker.com/r/wengerk/drupal-for-contrib) to run testing on our project.
+
+Run testing by stopping at first failure using the following command:
+
+    docker-compose exec -u www-data drupal phpunit --group=nbsp --no-coverage --stop-on-failure
 
 ## 🚔 Check Javascript best practices
 
