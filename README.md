@@ -42,7 +42,7 @@ must upgrade to `8.x-2.x` version of **NBSP**.
 
 ## Which version should I use?
 
-|Drupal Core|Backerymails|
+|Drupal Core|NBSP        |
 |:---------:|:----------:|
 |8.7.x      |1.x         |
 |8.8.x      |2.x         |
