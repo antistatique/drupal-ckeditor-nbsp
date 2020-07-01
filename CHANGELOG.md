@@ -1,7 +1,7 @@
 CHANGELOG
 ---------
 
-## NEXT RELEASE
+## 8.x-2.0-alpha (2020-07-01)
  - Issue #2941631 - Doc is a bit misleading
  - Issue #2996835 - Coding standard
  - add travis integration
