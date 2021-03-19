@@ -60,10 +60,22 @@ class NbspCleanerFilterTest extends KernelTestBase {
     return [
       ['', ''],
       ['<p>Maecenas cursus posuere</p>', '<p>Maecenas cursus posuere</p>'],
-      ['<p>Maecenas<span class="nbsp">&nbsp;</span>cursus posuere</p>', '<p>Maecenas cursus posuere</p>'],
-      ['<p>Maecenas<span class="nbsp">&nbsp;</span>cursus<span class="nbsp">&nbsp;</span>posuere</p>', '<p>Maecenas cursus posuere</p>'],
-      ['<p>Maecenas<div class="nbsp">&nbsp;</div>cursus posuere</p>', '<p>Maecenas</p><div class="nbsp"> </div>cursus posuere'],
-      ['<p>Maecenas<span>&nbsp;</span>cursus posuere</p>', '<p>Maecenas<span> </span>cursus posuere</p>'],
+      [
+        '<p>Maecenas<span class="nbsp">&nbsp;</span>cursus posuere</p>',
+        '<p>Maecenas cursus posuere</p>',
+      ],
+      [
+        '<p>Maecenas<span class="nbsp">&nbsp;</span>cursus<span class="nbsp">&nbsp;</span>posuere</p>',
+        '<p>Maecenas cursus posuere</p>',
+      ],
+      [
+        '<p>Maecenas<div class="nbsp">&nbsp;</div>cursus posuere</p>',
+        '<p>Maecenas</p><div class="nbsp"> </div>cursus posuere',
+      ],
+      [
+        '<p>Maecenas<span>&nbsp;</span>cursus posuere</p>',
+        '<p>Maecenas<span> </span>cursus posuere</p>',
+      ],
     ];
   }
 

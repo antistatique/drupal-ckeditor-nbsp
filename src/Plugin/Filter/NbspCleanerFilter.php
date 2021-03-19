@@ -22,7 +22,8 @@ class NbspCleanerFilter extends FilterBase {
    * {@inheritdoc}
    */
   public function process($text, $langcode) {
-    if ($filtered = $this->swapNbspHtml($text)) {
+    $filtered = $this->swapNbspHtml($text);
+    if ($filtered) {
       $result = new FilterProcessResult($filtered);
     }
     else {
