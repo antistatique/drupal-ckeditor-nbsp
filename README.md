@@ -5,7 +5,7 @@ into the content by pressing Ctrl+Space or using the provided button.
 
 |       Travis-CI        |        Downloads        |         Releases         |
 |:----------------------:|:-----------------------:|:------------------------:|
-| [![Build Status](https://travis-ci.com/antistatique/drupal-ckeditor-nbsp.svg?branch=8.x-2.x)](https://travis-ci.com/antistatique/drupal-ckeditor-nbsp)  | [![Downloads](https://img.shields.io/badge/downloads-8.x--2.0-green.svg?style=flat-square)](https://ftp.drupal.org/files/projects/nbsp-8.x-2.0-alpha1.tar.gz) | [![Latest Stable Version](https://img.shields.io/badge/release-v2.0-blue.svg?style=flat-square)](https://www.drupal.org/project/nbsp/releases) |
+| [![Build Status](https://github.com/antistatique/drupal-ckeditor-nbsp/actions/workflows/ci.yml/badge.svg)](https://github.com/antistatique/drupal-ckeditor-nbsp/actions/workflows/ci.yml) | [![Code styles](https://github.com/antistatique/drupal-ckeditor-nbsp/actions/workflows/styles.yml/badge.svg)](https://github.com/antistatique/drupal-ckeditor-nbsp/actions/workflows/styles.yml) | [![Latest Stable Version](https://img.shields.io/badge/release-v2.0-blue.svg?style=flat-square)](https://www.drupal.org/project/nbsp/releases) |
 
 ## Uses
 
