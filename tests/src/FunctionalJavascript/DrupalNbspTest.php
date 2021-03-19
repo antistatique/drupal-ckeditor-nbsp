@@ -16,6 +16,7 @@ use Drupal\Component\Utility\Html;
  * Ensure the NBSP CKeditor dialog works.
  *
  * @group nbsp
+ * @group nbsp_functional
  */
 class DrupalNbspTest extends WebDriverTestBase {
   use CKEditorTestTrait;
