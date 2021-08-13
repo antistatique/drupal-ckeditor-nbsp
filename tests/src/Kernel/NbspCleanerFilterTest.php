@@ -18,7 +18,7 @@ class NbspCleanerFilterTest extends KernelTestBase {
    *
    * @var array
    */
-  public static $modules = ['system', 'filter', 'nbsp'];
+  protected static $modules = ['system', 'filter', 'nbsp'];
 
   /**
    * Collection of CKeditor Plugin filters.
@@ -30,7 +30,7 @@ class NbspCleanerFilterTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
     $this->installConfig(['system']);
 

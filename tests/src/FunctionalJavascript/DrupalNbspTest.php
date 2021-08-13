@@ -24,7 +24,7 @@ class DrupalNbspTest extends WebDriverTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'filter',
     'editor',
     'ckeditor',
@@ -67,7 +67,7 @@ class DrupalNbspTest extends WebDriverTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     // Create text format.
