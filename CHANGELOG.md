@@ -1,6 +1,18 @@
 CHANGELOG
 ---------
 
+## [Unreleased]
+### Changed
+- disable deprecation notice PHPUnit
+
+### Removed
+- remove satackey/action-docker-layer-caching on Github Actions
+- remove trigger github actions on every pull-request, keep only push
+
+### Fixed
+- fixed docker test Javascript on CI
+- fixed docker test Unit Database not ready
+
 ## 8.x-2.0-alpha (2020-07-01)
  - Issue #2941631 - Doc is a bit misleading
  - Issue #2996835 - Coding standard
