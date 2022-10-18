@@ -40,13 +40,15 @@ The version `8.x-1.x` is not compatible with Drupal `8.8.x`.
 Drupal `8.8.x` brings some breaking change with tests and so you
 must upgrade to `8.x-2.x` version of **NBSP**.
 
+The version `8.x-3.x` is not compatible with Drupal `8.x` and will only support Drupal `9.x` Drupal `10.x`.
+
 ## Which version should I use?
 
-|Drupal Core|NBSP        |
-|:---------:|:----------:|
-|8.7.x      |1.x         |
-|8.8.x      |2.x         |
-|9.x        |2.x         |
+|Drupal Core|    NBSP   |
+|:---------:|:---------:|
+|8.7.x      |    1.x    |
+|8.8.x      |    2.x    |
+|9.x        | 2.x - 3.x |
 
 ## Dependencies
 
