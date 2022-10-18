@@ -7,10 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - add dependabot for GitHub Action dependency
+- add upgrade-status check
+- add coverage for Drupal 9.3, 9.4 & 9.5
 
 ### Changed
 - disable deprecation notice PHPUnit
 - update changelog form to follow keep-a-changelog format
+- drop support of drupal 8.8 & 8.9
 
 ### Removed
 - remove satackey/action-docker-layer-caching on Github Actions
