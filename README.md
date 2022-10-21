@@ -44,11 +44,12 @@ The version `8.x-3.x` is not compatible with Drupal `8.x` and will only support 
 
 ## Which version should I use?
 
-|Drupal Core|    NBSP   |
-|:---------:|:---------:|
-|8.7.x      |    1.x    |
-|8.8.x      |    2.x    |
-|9.x        | 2.x - 3.x |
+| Drupal Core |     NBSP     |
+|:-----------:|:------------:|
+|    8.7.x    |     1.x      |
+|    8.8.x    | 2.0.0-alpha1 |
+|    8.8.x    | 2.0.0-alpha1 |
+|     9.x     |    2.x       |
 
 ## Dependencies
 
