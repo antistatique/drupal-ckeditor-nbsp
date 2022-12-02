@@ -9,5 +9,5 @@ msgstr "Espace insécable"
 msgid "Cleanup NBSP markup"
 msgstr "Nettoye les espaces insécables"
 
-msgid "Remove <span> tag around <code>&amp;nbsp;</code>."
-msgstr "Supprime les tags <span> autour des <code>&amp;nbsp;</code>."
+msgid "Replaces <nbsp></nbsp> tag with &nbsp;."
+msgstr "Remplace les tags <nbsp></nbsp> par &nbsp;."

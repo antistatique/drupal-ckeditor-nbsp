@@ -2,9 +2,9 @@
 
 namespace Drupal\Tests\nbsp\Kernel;
 
-use Drupal\KernelTests\KernelTestBase;
 use Drupal\filter\FilterPluginCollection;
 use Drupal\filter\FilterProcessResult;
+use Drupal\KernelTests\KernelTestBase;
 
 /**
  * @coversDefaultClass \Drupal\nbsp\Plugin\Filter\NbspCleanerFilter
@@ -61,11 +61,11 @@ class NbspCleanerFilterTest extends KernelTestBase {
       ['', ''],
       ['<p>Maecenas cursus posuere</p>', '<p>Maecenas cursus posuere</p>'],
       [
-        '<p>Maecenas<span class="nbsp">&nbsp;</span>cursus posuere</p>',
+        '<p>Maecenas<nbsp>&nbsp;</nbsp>cursus posuere</p>',
         '<p>Maecenas cursus posuere</p>',
       ],
       [
-        '<p>Maecenas<span class="nbsp">&nbsp;</span>cursus<span class="nbsp">&nbsp;</span>posuere</p>',
+        '<p>Maecenas<nbsp>&nbsp;</nbsp>cursus<nbsp>&nbsp;</nbsp>posuere</p>',
         '<p>Maecenas cursus posuere</p>',
       ],
       [

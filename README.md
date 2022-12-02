@@ -31,8 +31,7 @@ where you want to use NBSP, do the following:
 * Enable filter "Cleanup NBSP markup".
 * if the "Limit allowed HTML tags and correct faulty HTML" filter is disabled
 you dont have anything to do with this text format.
-Otherwise, add the `class` attribute to `<span>` in the "allowed HTML tags"
-field (Eg. `<span class>`).
+Otherwise, add `<nbsp>` in the "allowed HTML tags" field.
 
 ## NBSP versions
 

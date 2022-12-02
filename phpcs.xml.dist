@@ -14,5 +14,7 @@
 
   <rule ref="./vendor/drupal/coder/coder_sniffer/Drupal"/>
   <rule ref="./vendor/drupal/coder/coder_sniffer/DrupalPractice"/>
+
+  <config name="installed_paths" value="../../drupal/coder/coder_sniffer,../../sirbrillig/phpcs-variable-analysis,../../slevomat/coding-standard,/opt/drupal/vendor/drupal/coder/coder_sniffer"/>
 </ruleset>
 

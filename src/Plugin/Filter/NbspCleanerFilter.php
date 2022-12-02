@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\nbsp\Plugin\Filter;
 
+use Drupal\Component\Utility\Html;
 use Drupal\filter\FilterProcessResult;
 use Drupal\filter\Plugin\FilterBase;
-use Drupal\Component\Utility\Html;
 
 /**
  * NBSP Cleaner Filter class. Implements process() method only.
@@ -12,7 +14,7 @@ use Drupal\Component\Utility\Html;
  * @Filter(
  *   id = "nbsp_cleaner_filter",
  *   title = @Translation("Cleanup NBSP markup"),
- *   description = @Translation("Remove <span> tag around <code>&amp;nbsp;</code>."),
+ *   description = @Translation("Replaces <code>&lt;nbsp&gt;&lt;/nbsp&gt;</code> tag with non-breaking space."),
  *   type = Drupal\filter\Plugin\FilterInterface::TYPE_TRANSFORM_IRREVERSIBLE,
  * )
  */
@@ -34,13 +36,16 @@ class NbspCleanerFilter extends FilterBase {
   }
 
   /**
-   * Replace <span class="nbsp"> tags with their respected HTML.
+   * Replace <span class="nbsp"> and <nbsp></nbsp> tags with respected HTML.
+   *
+   * The previous tag (span.nbsp) is still on the filter to keep
+   * compatibility with previous content created.
    *
    * @param string $text
-   *   The HTML string to replace <span class="nbsp"> tags.
+   *   The HTML string to replace <span class="nbsp"> and <nbsp></nbsp> tags.
    *
    * @return string
-   *   The HTML with all the <span class="nbsp">
+   *   The HTML with all the <span class="nbsp"> and <nbsp></nbsp>
    *   tags replaced with their respected html.
    */
   protected function swapNbspHtml($text) {
@@ -53,8 +58,14 @@ class NbspCleanerFilter extends FilterBase {
         $node->parentNode->replaceChild(new \DOMText($node->nodeValue), $node);
       }
     }
-
+    foreach ($xpath->query('//nbsp') as $node) {
+      if (!empty($node) && !empty($node->nodeValue)) {
+        // PHP DOM removing the tag (not content)
+        $node->parentNode->replaceChild(new \DOMText($node->nodeValue), $node);
+      }
+    }
     return Html::serialize($document);
+
   }
 
 }
