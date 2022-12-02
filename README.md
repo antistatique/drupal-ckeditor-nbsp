@@ -33,26 +33,27 @@ where you want to use NBSP, do the following:
 you dont have anything to do with this text format.
 Otherwise, add `<nbsp>` in the "allowed HTML tags" field.
 
-## NBSP versions
-
-The version `8.x-1.x` is not compatible with Drupal `8.8.x`.
-Drupal `8.8.x` brings some breaking change with tests and so you
-must upgrade to `8.x-2.x` version of **NBSP**.
-
-The version `8.x-3.x` is not compatible with Drupal `8.x` and will only support Drupal `9.x` Drupal `10.x`.
-
 ## Which version should I use?
 
-| Drupal Core |     NBSP     |
-|:-----------:|:------------:|
-|    8.7.x    |     1.x      |
-|    8.8.x    | 2.0.0-alpha1 |
-|    8.8.x    | 2.0.0-alpha1 |
-|     9.x     |    2.x       |
+NBSP is now available for both Drupal 8, Drupal 9 & Drupal 10!
+
+- if you are running Drupal `8.x`, use NBSP `8.x-2.0-alpha1`.
+- if you are running Drupal `9.x`, use NBSP `2.x`.
+- if you are running Drupal `10.x`, use NBSP `3.x`.
+
+| Drupal Core | CKeditor |     NBSP     |
+|:-----------:|:--------:|:------------:|
+|    8.7.x    |   4.x    |     1.x      |
+|    8.8.x    |   4.x    | 2.0.0-alpha1 |
+|    8.8.x    |   4.x    | 2.0.0-alpha1 |
+|     9.x     |   4.x    |   8.x-2.1    |
+|     9.x     |   5.x    |   8.x-2.2    |
+|    10.x     |   4.x    |   8.x-2.2    |
+|    10.x     |   5.x    |    3.0.x     |
 
 ## Dependencies
 
-The Drupal 8 & Drupal 9 version of NBSP requires
+The Drupal 8, Drupal 9 & Drupal 10 of NBSP requires
 [Editor](https://www.drupal.org/project/editor) and
 [CKEditor](https://www.drupal.org/project/ckeditor).
 
