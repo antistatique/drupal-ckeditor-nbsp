@@ -20,7 +20,7 @@ First of all, you will need to have the following tools installed
 globally on your environment:
 
   * drush
-  * Latest dev release of Drupal 8.x.
+  * Latest dev release of Drupal 8.x|9.x.
   * docker
   * docker-compose
 
@@ -85,13 +85,13 @@ violations.
 PHP_CodeSniffer is an essential development tool that ensures your code remains clean and consistent.
 
   ```
-  $ docker-compose exec drupal ./vendor/bin/phpcs ./web/modules/contrib/loco_translate/
+  $ docker-compose exec drupal ./vendor/bin/phpcs ./web/modules/contrib/nbsp/
   ```
 
 Automatically fix coding standards
 
   ```
-  $ docker-compose exec drupal ./vendor/bin/phpcbf ./web/modules/contrib/loco_translate/
+  $ docker-compose exec drupal ./vendor/bin/phpcbf ./web/modules/contrib/nbsp/
   ```
 
 #### Running PHP Mess Detector
@@ -101,7 +101,7 @@ https://github.com/phpmd/phpmd
 Detect overcomplicated expressions & Unused parameters, methods, properties.
 
   ```
-  $ docker-compose exec drupal phpmd ./web/modules/contrib/loco_translate/ text ./phpmd.xml \
+  $ docker-compose exec drupal phpmd ./web/modules/contrib/nbsp/ text ./phpmd.xml \
   --suffixes php,module,inc,install,test,profile,theme,css,info,txt --exclude *Test.php,*vendor/*,*node_modules/*
   ```
 
@@ -112,7 +112,7 @@ https://github.com/sebastianbergmann/phpcpd
 `phpcpd` is a Copy/Paste Detector (CPD) for PHP code.
 
   ```
-  $ docker-compose exec drupal phpcpd ./web/modules/contrib/loco_translate/src --suffix .php --suffix .module --suffix .inc --suffix .install --suffix .test --suffix .profile --suffix .theme --suffix .css --suffix .info --suffix .txt --exclude *.md --exclude *.info.yml --exclude tests --exclude vendor/ --exclude node_modules/
+  $ docker-compose exec drupal phpcpd ./web/modules/contrib/nbsp/src --suffix .php --suffix .module --suffix .inc --suffix .install --suffix .test --suffix .profile --suffix .theme --suffix .css --suffix .info --suffix .txt --exclude *.md --exclude *.info.yml --exclude tests --exclude vendor/ --exclude node_modules/
   ```
 
 #### Running PhpDeprecationDetector
@@ -122,7 +122,7 @@ https://github.com/wapmorgan/PhpDeprecationDetector
 A scanner that checks compatibility of your code with PHP interpreter versions.
 
   ```
-  $ docker-compose exec drupal phpdd ./web/modules/contrib/loco_translate/ \
+  $ docker-compose exec drupal phpdd ./web/modules/contrib/nbsp/ \
     --file-extensions php,module,inc,install,test,profile,theme,info --exclude vendor --exclude node_modules
   ```
 

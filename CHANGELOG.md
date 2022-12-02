@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- add support for CKEditor 5 - Issue #3277174 by mmiramont, VladimirAus, MacSim: CKEditor 5 compatibility
+
+### Changed
+- change generated markup from <span class="nbsp"> to own markup <nbsp> - Issue #3066349 by John Pitcairn, wengerk, PhilY, Artusamak: Using span is problematic due to Drupal's permissive html filters
 
 ## [2.1.0] - 2022-10-21
 ### Added

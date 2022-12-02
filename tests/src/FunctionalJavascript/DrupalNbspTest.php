@@ -2,23 +2,24 @@
 
 namespace Drupal\Tests\nbsp\FunctionalJavascript;
 
-use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Entity\Entity\EntityFormDisplay;
 use Drupal\editor\Entity\Editor;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\filter\Entity\FilterFormat;
+use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\node\Entity\NodeType;
 use Drupal\Tests\ckeditor\Traits\CKEditorTestTrait;
-use Drupal\Component\Utility\Html;
 
 /**
- * Ensure the NBSP CKeditor dialog works.
+ * Ensure the NBSP CKeditor 4 dialog works.
  *
  * @group nbsp
  * @group nbsp_functional
  */
 class DrupalNbspTest extends WebDriverTestBase {
+
   use CKEditorTestTrait;
 
   /**
@@ -53,14 +54,14 @@ class DrupalNbspTest extends WebDriverTestBase {
   /**
    * Defines a CKEditor using the "Full HTML" filter.
    *
-   * @var \Drupal\editor\Entity\EditorInterface
+   * @var \Drupal\editor\EditorInterface
    */
   protected $editor;
 
   /**
    * Defines a "Full HTML" filter format.
    *
-   * @var \Drupal\filter\Entity\FilterFormatInterface
+   * @var \Drupal\filter\FilterFormatInterface
    */
   protected $editorFilterFormat;
 
@@ -154,7 +155,8 @@ class DrupalNbspTest extends WebDriverTestBase {
 
     // Ensure the button NBSP is visible.
     $this->getSession()->switchToIFrame();
-    $this->assertNotEmpty($this->assertSession()->waitForElementVisible('css', 'a.cke_button__drupalnbsp'));
+    $this->assertNotEmpty($this->assertSession()
+      ->waitForElementVisible('css', 'a.cke_button__drupalnbsp'));
   }
 
   /**
@@ -193,7 +195,8 @@ class DrupalNbspTest extends WebDriverTestBase {
 
     // Ensure the button NBSP is not visible.
     $this->getSession()->switchToIFrame();
-    $this->assertEmpty($this->assertSession()->waitForElementVisible('css', 'a.cke_button__drupalnbsp'));
+    $this->assertEmpty($this->assertSession()
+      ->waitForElementVisible('css', 'a.cke_button__drupalnbsp'));
   }
 
   /**
@@ -207,17 +210,11 @@ class DrupalNbspTest extends WebDriverTestBase {
     $this->pressEditorButton('source');
 
     $assert_session = $this->assertSession();
-    $value = $assert_session->elementExists('css', 'textarea.cke_source')->getValue();
+    $value = $assert_session->elementExists('css', 'textarea.cke_source')
+      ->getValue();
     $dom = Html::load($value);
     $xpath = new \DOMXPath($dom);
-    $nbsp = $xpath->query('//span')[0];
-    $expected_attributes = [
-      'class' => 'nbsp',
-    ];
-    foreach ($expected_attributes as $name => $expected) {
-      $this->assertSame($expected, $nbsp->getAttribute($name));
-    }
-
+    $nbsp = $xpath->query('//nbsp')[0];
     $this->assertEquals(" ", $nbsp->firstChild->nodeValue);
   }
 
