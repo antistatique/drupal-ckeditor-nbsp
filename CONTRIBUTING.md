@@ -28,7 +28,7 @@ globally on your environment:
 
 Once run, you will be able to access to your fresh installed Drupal on `localhost::8888`.
 
-    docker-compose build --pull --build-arg BASE_IMAGE_TAG=9.3 drupal
+    docker-compose build --pull --build-arg BASE_IMAGE_TAG=10.0 drupal
     (get a coffee, this will take some time...)
     docker-compose up -d drupal chrome
     docker-compose exec -u www-data drupal drush site-install standard --db-url="mysql://drupal:drupal@db/drupal" -y
@@ -36,6 +36,15 @@ Once run, you will be able to access to your fresh installed Drupal on `localhos
     # You may be interesed by reseting the admin passowrd of your Docker and install the module using those cmd.
     docker-compose exec drupal drush user:password admin admin
     docker-compose exec drupal drush en nbsp
+
+## 🚔 Build Javascript
+
+You need to run `yarn` before using Webpack. Then run the commmand:
+
+  ```
+  // Build Plugin CKEditor 5 assets.
+  yarn build
+  ```
 
 ## 🏆 Tests
 

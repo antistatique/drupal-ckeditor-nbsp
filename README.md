@@ -3,10 +3,6 @@
 Minimal module to insert a non-breaking space (`&nbsp;`)
 into the content by pressing Ctrl+Space or using the provided button.
 
-|       Travis-CI        |        Downloads        |         Releases         |
-|:----------------------:|:-----------------------:|:------------------------:|
-| [![Build Status](https://github.com/antistatique/drupal-ckeditor-nbsp/actions/workflows/ci.yml/badge.svg)](https://github.com/antistatique/drupal-ckeditor-nbsp/actions/workflows/ci.yml) | [![Code styles](https://github.com/antistatique/drupal-ckeditor-nbsp/actions/workflows/styles.yml/badge.svg)](https://github.com/antistatique/drupal-ckeditor-nbsp/actions/workflows/styles.yml) | [![Latest Stable Version](https://img.shields.io/badge/release-v2.0-blue.svg?style=flat-square)](https://www.drupal.org/project/nbsp/releases) |
-
 ## Uses
 
 During content creation the author may add a non-breaking space (`&nbsp;`)
@@ -53,7 +49,11 @@ NBSP is now available for both Drupal 8, Drupal 9 & Drupal 10!
 
 ## Dependencies
 
-The Drupal 8, Drupal 9 & Drupal 10 of NBSP requires
+The Drupal 10 version of NBSP requires
+[Editor](https://www.drupal.org/project/editor) and
+[CKEditor 5](https://ckeditor.com/ckeditor-5/).
+
+The Drupal 8 & Drupal 9 versions of NBSP requires
 [Editor](https://www.drupal.org/project/editor) and
 [CKEditor](https://www.drupal.org/project/ckeditor).
 
