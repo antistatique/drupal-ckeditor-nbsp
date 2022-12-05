@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - add support for CKEditor 5 - Issue #3277174 by mmiramont, VladimirAus, MacSim: CKEditor 5 compatibility
-- add official support of drupal 9.5 & 10.0
+- add official support of drupal 9.5
 
 ### Changed
 - change generated markup from <span class="nbsp"> to own markup <nbsp> - Issue #3066349 by John Pitcairn, wengerk, PhilY, Artusamak: Using span is problematic due to Drupal's permissive html filters
