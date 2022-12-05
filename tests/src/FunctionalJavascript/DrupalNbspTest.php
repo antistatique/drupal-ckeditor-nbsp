@@ -42,7 +42,7 @@ class DrupalNbspTest extends WebDriverTestBase {
   /**
    * {@inheritdoc}
    */
-  protected $defaultTheme = 'classy';
+  protected $defaultTheme = 'starterkit_theme';
 
   /**
    * A user with the 'administer filters' permission.
