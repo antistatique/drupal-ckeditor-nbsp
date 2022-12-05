@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - change generated markup from <span class="nbsp"> to own markup <nbsp> - Issue #3066349 by John Pitcairn, wengerk, PhilY, Artusamak: Using span is problematic due to Drupal's permissive html filters
-- re-enable PHPUnit Symfony Deprecation notice
 
 ### Removed
 - drop support of drupal below 9.3.x
