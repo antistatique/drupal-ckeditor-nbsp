@@ -21,6 +21,11 @@ use Drupal\filter\Plugin\FilterBase;
 class NbspCleanerFilter extends FilterBase {
 
   /**
+   * The nbsp character in UFT-8.
+   */
+  const UTF_8_NBSP = "\xc2\xa0";
+
+  /**
    * {@inheritdoc}
    */
   public function process($text, $langcode) {
@@ -53,15 +58,15 @@ class NbspCleanerFilter extends FilterBase {
     $xpath = new \DOMXPath($document);
 
     foreach ($xpath->query('//span[@class="nbsp"]') as $node) {
-      if (!empty($node) && !empty($node->nodeValue)) {
-        // PHP DOM removing the tag (not content)
-        $node->parentNode->replaceChild(new \DOMText($node->nodeValue), $node);
+      if (!empty($node)) {
+        // PHP DOM replacing the nbsp-span with nbsp character.
+        $node->parentNode->replaceChild(new \DOMText(self::UTF_8_NBSP), $node);
       }
     }
     foreach ($xpath->query('//nbsp') as $node) {
-      if (!empty($node) && !empty($node->nodeValue)) {
-        // PHP DOM removing the tag (not content)
-        $node->parentNode->replaceChild(new \DOMText($node->nodeValue), $node);
+      if (!empty($node)) {
+        // PHP DOM replacing the nbsp-tag with nbsp character.
+        $node->parentNode->replaceChild(new \DOMText(self::UTF_8_NBSP), $node);
       }
     }
     return Html::serialize($document);
