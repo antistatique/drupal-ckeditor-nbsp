@@ -6,7 +6,6 @@ package: CKEditor
 
 dependencies:
   - drupal:editor
-  - drupal:ckeditor
 
 interface translation project: nbsp
 interface translation server pattern: translations/%language.po

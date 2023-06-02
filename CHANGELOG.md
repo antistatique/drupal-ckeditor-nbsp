@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - fix issue #3336616 by Harlor, wengerk: CKEditor5 replaces nbsp with whitespaces
 
+### Removed
+- fix Issue #3355217 by wengerk, vincent signoret: ckeditor dependency on 8.x-2.2 drupal 9.4 ckeditor5
+
 ## [2.2.0] - 2022-12-05
 ### Added
 - add support for CKEditor 5 - Issue #3277174 by mmiramont, VladimirAus, MacSim: CKEditor 5 compatibility
