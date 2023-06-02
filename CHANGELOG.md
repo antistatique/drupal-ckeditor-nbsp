@@ -67,7 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First draft.
 
 [Unreleased]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.3...HEAD
-[2.2.1]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.2...8.x-2.3
+[2.3.0]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.2...8.x-2.3
 [2.2.0]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.1...8.x-2.2
 [2.1.0]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.0-alpha1...8.x-2.1
 [2.0.0-alpha1]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-1.2...8.x-2.0-alpha1
