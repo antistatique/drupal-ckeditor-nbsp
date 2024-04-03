@@ -50,6 +50,12 @@ class NbspCleanerFilterTest extends KernelTestBase {
     /** @var \Drupal\filter\FilterProcessResult $result */
     $result = $filter->process($input, 'und');
     $this->assertInstanceOf(FilterProcessResult::class, $result);
+
+    // Since Drupal 10.2.0 use filter system HTML5.
+    if (version_compare(\Drupal::VERSION, '10.2.0', '>')) {
+      $expected = str_replace(' ', '&nbsp;', $expected);
+    }
+
     $this->assertEquals($expected, $result->getProcessedText());
   }
 
