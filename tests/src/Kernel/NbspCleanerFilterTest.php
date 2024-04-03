@@ -71,6 +71,10 @@ class NbspCleanerFilterTest extends KernelTestBase {
         '<p>Maecenas cursus posuere</p>',
       ],
       [
+        '<p>Maecenas <a href="https://www.google.ch">lorem<nbsp>&nbsp;</nbsp>ipsum</a><nbsp>&nbsp;</nbsp>cursus<nbsp>&nbsp;</nbsp>posuere</p>',
+        '<p>Maecenas <a href="https://www.google.ch">lorem ipsum</a> cursus posuere</p>',
+      ],
+      [
         '<p>Maecenas<nbsp>&nbsp;</nbsp>cursus<nbsp>&nbsp;</nbsp>posuere</p>',
         '<p>Maecenas cursus posuere</p>',
       ],
