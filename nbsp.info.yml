@@ -9,4 +9,3 @@ dependencies:
   - drupal:ckeditor5
 
 interface translation project: nbsp
-interface translation server pattern: translations/%language.po

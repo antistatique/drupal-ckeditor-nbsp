@@ -14,6 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - fix tests on Drupal 10.2+ using HTML5 filter
 
+### Removed
+- removed translation-files - Issue #3365383
+
 ## [3.0.1] - 2023-06-02
 ### Fixed
 - fix issue #3336616 by Harlor, wengerk: CKEditor5 replaces nbsp with whitespaces
