@@ -42,3 +42,9 @@ variables:
 # This module wants to strictly comply with Drupal's coding standards.
 phpcs:
   allow_failure: false
+
+################
+# Require stylelint checks to pass.
+################
+stylelint:
+  allow_failure: false
