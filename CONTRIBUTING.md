@@ -63,7 +63,16 @@ You need to run `yarn` before using ESLint. Then run the commmand:
   yarn run prettier
 
   // Run ESLint - Passing ruleset with more problematic rules turned off.
-  yarn run lint:core-js-passing
+  yarn run lint:js-passing
+  ```
+
+## 🚔 Check Styles best practices
+
+You need to run `yarn` before using Stylelint. Then run the commmand:
+
+  ```
+  // Run Stylelint
+  yarn lint:css
   ```
 
 ## 🚔 Check Drupal coding standards & Drupal best practices

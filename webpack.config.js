@@ -36,7 +36,7 @@ getDirectories("./js/ckeditor5_plugins").forEach((dir) => {
         __dirname,
         "js/ckeditor5_plugins",
         dir,
-        "src/index.js"
+        "src/index.js",
       ),
     },
     output: {
