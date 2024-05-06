@@ -11,7 +11,9 @@ export default class NbspEditing extends Plugin {
     const schema = this.editor.model.schema;
     schema.register("nbsp", {
       allowWhere: "$text",
+      allowAttributesOf: "$text",
       isInline: true,
+      isObject: true,
     });
   }
 
