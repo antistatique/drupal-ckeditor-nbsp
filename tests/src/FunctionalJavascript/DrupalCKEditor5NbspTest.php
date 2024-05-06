@@ -83,6 +83,7 @@ class DrupalCKEditor5NbspTest extends WebDriverTestBase {
       'toolbar' => [
         'items' => [
           'sourceEditing',
+          'link',
           'bold',
           'italic',
           'nbsp',
@@ -168,6 +169,34 @@ class DrupalCKEditor5NbspTest extends WebDriverTestBase {
     $xpath = new \DOMXPath($this->getEditorDataAsDom());
     $nbsp = $xpath->query('//nbsp')[0];
     $this->assertEquals(" ", $nbsp->firstChild->nodeValue);
+  }
+
+  /**
+   * Tests using Drupal Nbsp button to add non-breaking space into Link.
+   */
+  public function testNbspInsideLinkTag() {
+    $this->drupalGet('node/add/page');
+    $this->waitForEditor();
+    $assert_session = $this->assertSession();
+    $assert_session->waitForElementVisible('css', '.ck-editor__editable', 1000);
+
+    // Emulate the user typing a link and adding an NBSP element inside.
+    $this->pressEditorButton('Source');
+    $source_text_area = $assert_session->waitForElement('css', '.ck-source-editing-area textarea');
+    $source_text_area->setValue('lorem ipsum <a href="https://www.google.ch">dolore<nbsp>&nbsp;</nbsp>sit</a> amet.');
+
+    // Click source again to make source inactive and have the Schema refreshed.
+    $this->pressEditorButton('Source');
+
+    // The link should be left intact and we should have 1 NBSP element inside.
+    $xpath = new \DOMXPath($this->getEditorDataAsDom());
+    $nbsp = $xpath->query('//nbsp');
+    $this->assertCount(1, $nbsp);
+    $this->assertEquals(" ", $nbsp[0]->firstChild->nodeValue);
+
+    $link = $xpath->query('//a');
+    $this->assertCount(1, $link);
+    $this->assertEquals("dolore sit", $link[0]->textContent);
   }
 
 }
