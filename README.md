@@ -37,15 +37,16 @@ NBSP is now available for both Drupal 8, Drupal 9 & Drupal 10!
 - if you are running Drupal `9.x`, use NBSP `2.x`.
 - if you are running Drupal `10.x`, use NBSP `3.x`.
 
-| Drupal Core | CKeditor |     NBSP     |
-|:-----------:|:--------:|:------------:|
-|    8.7.x    |   4.x    |     1.x      |
-|    8.8.x    |   4.x    | 2.0.0-alpha1 |
-|    8.8.x    |   4.x    | 2.0.0-alpha1 |
-|     9.x     |   4.x    |   8.x-2.1    |
-|     9.x     |   5.x    |   8.x-2.2    |
-|    10.x     |   4.x    |   8.x-2.2    |
-|    10.x     |   5.x    |    3.0.x     |
+|     Drupal Core     | CKeditor |     NBSP     |
+|:-------------------:|:--------:|:------------:|
+|        8.7.x        |   4.x    |     1.x      |
+|        8.8.x        |   4.x    | 2.0.0-alpha1 |
+|        8.8.x        |   4.x    | 2.0.0-alpha1 |
+|         9.x         |   4.x    |   8.x-2.1    |
+|         9.x         |   5.x    |   8.x-2.2    |
+|        10.x         |   4.x    |   8.x-2.2    |
+|        10.x         |   5.x    |    3.0.x     |
+|      11.x-dev       |   5.x    |    3.0.x     |
 
 ## Dependencies
 

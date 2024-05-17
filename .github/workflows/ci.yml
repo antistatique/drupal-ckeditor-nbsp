@@ -12,8 +12,13 @@ jobs:
 
     strategy:
       matrix:
-        drupal_version: ['10.0', '10.1', '10.2']
+        drupal_version: ['10.0', '10.1', '10.2', '10.3']
         module: ['nbsp']
+        experimental: [false]
+        include:
+          - drupal_version: '11.0'
+            module: 'nbsp'
+            experimental: true
 
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +33,7 @@ jobs:
         run: docker compose exec -T drupal wait-for-it db:3306 -t 60
       - name: Run unit tests
         run: docker compose -f docker-compose.yml exec -T -u www-data drupal phpunit --no-coverage --group=${{ matrix.module }} --exclude-group=${{ matrix.module }}_functional --configuration=/var/www/html/phpunit.xml
+        continue-on-error: ${{ matrix.experimental }}
 
   tests-functional:
     name: Functional Tests
@@ -38,12 +44,18 @@ jobs:
       matrix:
         drupal_version: ['10.0', '10.1', '10.2']
         module: ['nbsp']
+        experimental: [false]
+        include:
+          - drupal_version: '11.0'
+            module: 'nbsp'
+            experimental: true
 
     steps:
       - uses: actions/checkout@v4
       - run: docker compose -f docker-compose.yml pull --include-deps drupal
       - name: Build the docker compose stack
         run: docker compose -f docker-compose.yml build --pull --build-arg BASE_IMAGE_TAG=${{ matrix.drupal_version }} drupal
+        continue-on-error: ${{ matrix.experimental }}
       - name: Up a persistent Docker Container
         run: docker compose -f docker-compose.yml up -d drupal chrome
       - name: wait on Docker to be ready, especially Apache that takes many seconds to be up
@@ -54,8 +66,10 @@ jobs:
         run: docker compose exec -T drupal wait-for-it chrome:9515 -t 60
       - name: Bootstrap Drupal
         run: docker compose -f docker-compose.yml exec -T -u www-data drupal drush site-install standard --db-url="mysql://drupal:drupal@db/drupal" -y
+        continue-on-error: ${{ matrix.experimental }}
       - name: Run tests
         run: docker compose -f docker-compose.yml exec -T -u www-data drupal phpunit --no-coverage --group=${{ matrix.module }}_functional --configuration=/var/www/html/phpunit.xml --fail-on-risky
+        continue-on-error: ${{ matrix.experimental }}
 
   upgrade-status:
     name: Upgrade Status
