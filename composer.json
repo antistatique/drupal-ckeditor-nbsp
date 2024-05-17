@@ -2,7 +2,8 @@
   "name": "drupal/nbsp",
   "description": "Minimal module to insert a non-breaking space (&nbsp;) into the content by pressing Ctrl+Space or using the provided button.",
   "type": "drupal-module",
-  "homepage": "https://www.drupal.org/sandbox/wengerk/nbsp",
+  "homepage": "https://www.drupal.org/project/nbsp",
+  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Antistatique",
@@ -17,12 +18,19 @@
       "role": "Author & Maintainer"
     }
   ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
   "support": {
     "issues": "https://www.drupal.org/project/issues/nbsp"
   },
   "license": "GPL-2.0-or-later",
   "require-dev": {
-    "drupal/coder": "^8.3.1"
+    "drupal/coder": "^8.3.1",
+    "drupal/ckeditor": "^1.0"
   },
   "config": {
     "allow-plugins": {
