@@ -37,6 +37,15 @@ Once run, you will be able to access to your fresh installed Drupal on `localhos
     docker compose exec drupal drush user:password admin admin
     docker compose exec drupal drush en nbsp
 
+## 🚔 Build Javascript
+
+You need to run `yarn` before using Webpack. Then run the commmand:
+
+  ```
+  // Build Plugin CKEditor 5 assets.
+  yarn build
+  ```
+
 ## 🏆 Tests
 
 We use the [Docker for Drupal Contrib images](https://hub.docker.com/r/wengerk/drupal-for-contrib) to run testing on our project.
