@@ -58,16 +58,12 @@ class NbspCleanerFilter extends FilterBase {
     $xpath = new \DOMXPath($document);
 
     foreach ($xpath->query('//span[@class="nbsp"]') as $node) {
-      if (!empty($node)) {
-        // PHP DOM replacing the nbsp-span with nbsp character.
-        $node->parentNode->replaceChild(new \DOMText(self::UTF_8_NBSP), $node);
-      }
+      // PHP DOM replacing the nbsp-span with nbsp character.
+      $node->parentNode->replaceChild(new \DOMText(self::UTF_8_NBSP), $node);
     }
     foreach ($xpath->query('//nbsp') as $node) {
-      if (!empty($node)) {
-        // PHP DOM replacing the nbsp-tag with nbsp character.
-        $node->parentNode->replaceChild(new \DOMText(self::UTF_8_NBSP), $node);
-      }
+      // PHP DOM replacing the nbsp-tag with nbsp character.
+      $node->parentNode->replaceChild(new \DOMText(self::UTF_8_NBSP), $node);
     }
     return Html::serialize($document);
 
