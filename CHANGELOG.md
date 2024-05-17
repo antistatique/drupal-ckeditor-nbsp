@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - add official support of drupal 10.0 (with CKEditor 4)
 - add coverage of Drupal 10.1.x
 - add coverage of Drupal 10.2.x
+- add Drupal GitlabCI
 
 ### Changed
 - fix tests on Drupal 10.2+ using HTML5 filter
