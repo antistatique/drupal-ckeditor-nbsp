@@ -183,7 +183,7 @@ class DrupalCKEditor5NbspTest extends WebDriverTestBase {
     // Emulate the user typing a link and adding an NBSP element inside.
     $this->pressEditorButton('Source');
     $source_text_area = $assert_session->waitForElement('css', '.ck-source-editing-area textarea');
-    $source_text_area->setValue('lorem ipsum <a href="https://www.google.ch">dolore<nbsp>&npbs;</nbsp>sit</a> amet.');
+    $source_text_area->setValue('lorem ipsum <a href="https://www.google.ch">dolore<nbsp>&nbsp;</nbsp>sit</a> amet.');
 
     // Click source again to make source inactive and have the Schema refreshed.
     $this->pressEditorButton('Source');

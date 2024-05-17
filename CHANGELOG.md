@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - add Drupal core .stylelintrc.json
 - add coverage of Drupal 10.3.x
 - add experimental coverage of Drupal 11.x-dev
+- add cpsell project words for Gitlab-CI
 
 ### Changed
 - fix tests on Drupal 10.2+ using HTML5 filter
