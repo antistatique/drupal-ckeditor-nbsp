@@ -1,4 +1,4 @@
-import {Plugin} from 'ckeditor5/src/core';
+import { Plugin } from "ckeditor5/src/core";
 import NbspEditing from "./nbspEditing";
 import NbspUI from "./nbspUI";
 
@@ -12,11 +12,10 @@ export default class Nbsp extends Plugin {
    * @inheritdoc
    */
   static get pluginName() {
-    return 'Nbsp';
+    return "Nbsp";
   }
 
   static get requires() {
     return [NbspEditing, NbspUI];
   }
-
 }

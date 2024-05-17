@@ -17,28 +17,32 @@
     icons: "nbsp",
     hidpi: true,
 
-    init: function(editor) {
+    init: function (editor) {
       //Add &shy; widget
-      editor.widgets.add('insertNbsp', {
-        template: '<nbsp>&nbsp;</nbsp>',
+      editor.widgets.add("insertNbsp", {
+        template: "<nbsp>&nbsp;</nbsp>",
         draggable: false,
-        allowedContent: 'nbsp',
+        allowedContent: "nbsp",
         requiredContent: new CKEDITOR.style({
-          element: 'nbsp',
+          element: "nbsp",
         }),
         inline: true,
 
         //position cursor after widget so users can keep on typing
-        init: function() {
-          this.once( 'focus', function() {
-            var range = editor.createRange();
-            range.moveToPosition( this.wrapper, CKEDITOR.POSITION_AFTER_END );
-            range.select();
-          }, this );
+        init: function () {
+          this.once(
+            "focus",
+            function () {
+              var range = editor.createRange();
+              range.moveToPosition(this.wrapper, CKEDITOR.POSITION_AFTER_END);
+              range.select();
+            },
+            this,
+          );
         },
         upcast: function (element, data) {
-          return element.name === 'nbsp';
-        }
+          return element.name === "nbsp";
+        },
       });
 
       // Insert  if Ctrl+Space is pressed:
@@ -49,9 +53,9 @@
         editor.ui.addButton("DrupalNbsp", {
           label: Drupal.t("Non-breaking space"),
           command: "insertNbsp",
-          icon: editor.config.NbspImageIcon
+          icon: editor.config.NbspImageIcon,
         });
       }
-    }
+    },
   });
 })(jQuery, Drupal, CKEDITOR);
