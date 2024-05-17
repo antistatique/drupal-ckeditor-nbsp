@@ -3,6 +3,8 @@
     "lint:core-js": "node ./node_modules/eslint/bin/eslint.js .",
     "lint:core-js-passing": "node ./node_modules/eslint/bin/eslint.js --quiet --config=.eslintrc.passing.json .",
     "lint:core-js-stats": "node ./node_modules/eslint/bin/eslint.js --format=./scripts/js/eslint-stats-by-type.js .",
+    "lint:css": "stylelint \"css/**/*.css\"",
+    "lint:css-checkstyle": "stylelint \"**/*.css\" --custom-formatter ./node_modules/stylelint-checkstyle-formatter/index.js",
     "prettier": "prettier --write \"./**/*.es6.js\" \"./**/*.js\" \"./tests/Drupal/Nightwatch/**/*.js\"",
     "prettier-check": "prettier --check \"./**/*.es6.js\" \"./**/*.js\" \"./tests/Drupal/Nightwatch/**/*.js\""
   },
@@ -14,6 +16,11 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
-    "prettier": "^1.15.2"
+    "prettier": "^1.15.2",
+    "stylelint": "^16.5.0",
+    "stylelint-checkstyle-formatter": "^0.1.2",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-formatter-gitlab": "^1.0.2",
+    "stylelint-order": "^6.0.4"
   }
 }
