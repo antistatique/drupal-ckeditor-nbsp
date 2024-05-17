@@ -50,6 +50,12 @@ class NbspCleanerFilterTest extends KernelTestBase {
     /** @var \Drupal\filter\FilterProcessResult $result */
     $result = $filter->process($input, 'und');
     $this->assertInstanceOf(FilterProcessResult::class, $result);
+
+    // Since Drupal 10.2.0 use filter system HTML5.
+    if (version_compare(\Drupal::VERSION, '10.2.0', '>')) {
+      $expected = str_replace(' ', '&nbsp;', $expected);
+    }
+
     $this->assertEquals($expected, $result->getProcessedText());
   }
 
@@ -63,6 +69,10 @@ class NbspCleanerFilterTest extends KernelTestBase {
       [
         '<p>Maecenas<nbsp>&nbsp;</nbsp>cursus posuere</p>',
         '<p>Maecenas cursus posuere</p>',
+      ],
+      [
+        '<p>Maecenas <a href="https://www.google.ch">lorem<nbsp>&nbsp;</nbsp>ipsum</a><nbsp>&nbsp;</nbsp>cursus<nbsp>&nbsp;</nbsp>posuere</p>',
+        '<p>Maecenas <a href="https://www.google.ch">lorem ipsum</a> cursus posuere</p>',
       ],
       [
         '<p>Maecenas<nbsp>&nbsp;</nbsp>cursus<nbsp>&nbsp;</nbsp>posuere</p>',
