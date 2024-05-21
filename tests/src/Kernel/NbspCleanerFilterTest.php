@@ -62,7 +62,7 @@ class NbspCleanerFilterTest extends KernelTestBase {
   /**
    * Provides texts to check and expected results.
    */
-  public function providerTexts() {
+  public static function providerTexts() {
     return [
       ['', ''],
       ['<p>Maecenas cursus posuere</p>', '<p>Maecenas cursus posuere</p>'],

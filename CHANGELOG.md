@@ -22,6 +22,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - removed translation-files - Issue #3365383
 
+### Fixed
+- fix deprecation by passing @dataprovider as static function
+
 ## [3.0.1] - 2023-06-02
 ### Fixed
 - fix issue #3336616 by Harlor, wengerk: CKEditor5 replaces nbsp with whitespaces
