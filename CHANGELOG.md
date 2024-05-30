@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [3.0.2] - 2024-05-30
 ### Added
 - add coverage of Drupal 10.1.x
 - add coverage of Drupal 10.2.x
@@ -24,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - fix deprecation by passing @dataprovider as static function
+- fix Issue #3432756 by wengerk: Splitting the links in two
 
 ## [3.0.1] - 2023-06-02
 ### Fixed
@@ -89,7 +92,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - First draft.
 
-[Unreleased]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/3.0.1...HEAD
+[Unreleased]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/3.0.2...HEAD
+[3.0.2]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/3.0.1...3.0.2
 [3.0.1]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/3.0.0...3.0.1
 [3.0.0]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.2...3.0.0
 [2.2.0]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.1...8.x-2.2
