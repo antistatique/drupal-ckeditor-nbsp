@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [2.4.0] - 2024-05-31
 ### Added
 - add official support of drupal 10.0 (with CKEditor 4)
 - add coverage of Drupal 10.1.x
@@ -81,7 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - First draft.
 
-[Unreleased]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.3...HEAD
+[Unreleased]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.4...HEAD
+[2.4.0]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.3...8.x-2.4
 [2.3.0]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.2...8.x-2.3
 [2.2.0]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.1...8.x-2.2
 [2.1.0]: https://github.com/antistatique/drupal-ckeditor-nbsp/compare/8.x-2.0-alpha1...8.x-2.1
