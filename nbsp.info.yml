@@ -8,4 +8,3 @@ dependencies:
   - drupal:editor
 
 interface translation project: nbsp
-interface translation server pattern: translations/%language.po
