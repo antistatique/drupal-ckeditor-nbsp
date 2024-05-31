@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - drop support of drupal below 9.5.x
+- removed translation-files - Issue #3365383
 
 ## [2.3.0] - 2023-06-02
 ### Fixed
