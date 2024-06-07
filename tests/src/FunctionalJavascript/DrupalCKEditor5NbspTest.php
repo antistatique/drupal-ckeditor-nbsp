@@ -199,4 +199,48 @@ class DrupalCKEditor5NbspTest extends WebDriverTestBase {
     $this->assertEquals("dolore sit", $link[0]->textContent);
   }
 
+  /**
+   * Tests using Drupal Nbsp button to add non-breaking space into Link via Btn.
+   *
+   * @group kevin
+   */
+  public function testNbspInsideLinkTagWithButton() {
+    $this->drupalGet('node/add/page');
+    $this->waitForEditor();
+    $assert_session = $this->assertSession();
+    $editor = $assert_session->waitForElementVisible('css', '.ck-editor__editable', 1000);
+
+    // Emulate the user typing a link element.
+    $this->pressEditorButton('Source');
+    $source_text_area = $assert_session->waitForElement('css', '.ck-source-editing-area textarea');
+    $source_text_area->setValue('lorem ipsum <a href="https://www.google.ch">dolore<em>sit</em>dolo</a> amet.');
+
+    // Click source again to make source inactive and have the Schema refreshed.
+    $this->pressEditorButton('Source');
+
+    // Place an NBSP element inside the link by replacing the content of the
+    // <em> element.
+    $this->selectTextInsideElement('.ck-editor__editable a em');
+    $this->pressEditorButton('Insert non-breaking space');
+
+    $this->assertNotEmpty($assert_session->waitForElement('css', '.ck-editor__editable a em > nbsp'));
+
+    // Since Drupal 10.1.0.
+    if (version_compare(\Drupal::VERSION, '10.1.0', '>')) {
+      $this->assertEquals('<p>lorem ipsum <a href="https://www.google.ch" class="ck-link_selected">dolore<em><nbsp><br data-cke-filler="true"></nbsp></em>dolo</a> amet.</p>', $editor->getHtml());
+    }
+    else {
+      $this->assertEquals('<p>lorem ipsum <a href="https://www.google.ch">dolore<em><nbsp><br data-cke-filler="true"></nbsp></em>dolo</a> amet.</p>', $editor->getHtml());
+    }
+
+    // The link should be left intact and we should have 1 NBSP element inside.
+    $xpath = new \DOMXPath($this->getEditorDataAsDom());
+    $nbsp = $xpath->query('//nbsp');
+    $this->assertCount(1, $nbsp);
+    $this->assertEquals(" ", $nbsp[0]->firstChild->nodeValue);
+    $link = $xpath->query('//a');
+    $this->assertCount(1, $link);
+    $this->assertEquals("dolore dolo", $link[0]->textContent);
+  }
+
 }
