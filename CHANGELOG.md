@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - fix issue #3432756 by wengerk, drunir, ksenzee: Splitting the links in two
 
+### Removed
+- remove legacy version annotation on docker-compose.yml
+
 ## [3.0.2] - 2024-05-30
 ### Added
 - add coverage of Drupal 10.1.x
