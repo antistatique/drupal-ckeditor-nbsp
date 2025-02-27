@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - fix issue #3432756 by wengerk, drunir, ksenzee: Splitting the links in two
 
+### Changed
+- update Docker MariaDB 10.3 -> 10.6
+
 ### Removed
 - remove legacy version annotation on docker-compose.yml
 
