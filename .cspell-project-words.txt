@@ -31,4 +31,3 @@ wapmorgan
 Wenger
 wengerk
 dolo
-whitelisted
