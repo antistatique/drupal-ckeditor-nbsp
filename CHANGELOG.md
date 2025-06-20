@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - upgrade javascript dependencies
 
+### Added
+- update cpsell allowed words
+
 ## [3.0.3] - 2025-03-20
 ### Added
 - add official support of drupal 10.4
