@@ -224,14 +224,7 @@ class DrupalCKEditor5NbspTest extends WebDriverTestBase {
     $this->pressEditorButton('Insert non-breaking space');
 
     $this->assertNotEmpty($assert_session->waitForElement('css', '.ck-editor__editable a em > nbsp'));
-
-    // Since Drupal 10.1.0.
-    if (version_compare(\Drupal::VERSION, '10.1.0', '>')) {
-      $this->assertEquals('<p>lorem ipsum <a href="https://www.google.ch" class="ck-link_selected">dolore<em><nbsp><br data-cke-filler="true"></nbsp></em>dolo</a> amet.</p>', $editor->getHtml());
-    }
-    else {
-      $this->assertEquals('<p>lorem ipsum <a href="https://www.google.ch">dolore<em><nbsp><br data-cke-filler="true"></nbsp></em>dolo</a> amet.</p>', $editor->getHtml());
-    }
+    $this->assertEquals('<p>lorem ipsum <a href="https://www.google.ch" class="ck-link_selected">dolore<em><nbsp><br data-cke-filler="true"></nbsp></em>dolo</a> amet.</p>', $editor->getHtml());
 
     // The link should be left intact and we should have 1 NBSP element inside.
     $xpath = new \DOMXPath($this->getEditorDataAsDom());

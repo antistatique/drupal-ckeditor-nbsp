@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - update cpsell allowed words
+- add official support of drupal 10.5
+- add official support of drupal 11.2
+
+### Removed
+- drop support of drupal 10.4.x
+- drop support of drupal 10.3.x
+- drop support of drupal 10.2.x
+- drop support of drupal 10.1.x
+- drop support of drupal 10.0.x
 
 ## [3.0.3] - 2025-03-20
 ### Added
