@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - drop support of drupal 10.1.x
 - drop support of drupal 10.0.x
 
+### Fixed
+- fix styelint css rgba -> rgb function
+
 ## [3.0.3] - 2025-03-20
 ### Added
 - add official support of drupal 10.4
