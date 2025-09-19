@@ -26,7 +26,7 @@ include:
 #
 # These are the variables provided to the Run Pipeline form that a user may want to override.
 #
-# Docs at https://git.drupalcode.org/project/gitlab_templates/-/blob/1.0.x/includes/include.drupalci.variables.yml
+# Docs at https://git.drupalcode.org/project/gitlab_templates/-/blob/main/includes/include.drupalci.variables.yml
 ################
 variables:
   # Opt in to testing current minor against max supported PHP version.
@@ -50,4 +50,6 @@ phpcs:
 # Require stylelint checks to pass.
 ################
 stylelint:
+  before_script:
+    - rm $DRUPAL_PROJECT_FOLDER/.stylelintrc.json
   allow_failure: false
