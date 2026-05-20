@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - chore(cspell): add cspell exception for sirbrillig
 
+### Added
+- build(composer): allow composer plugin drupal/core-composer-scaffold
+
 ## [3.1.1] - 2025-10-06
 ### Changed
 - update stylelintrc.json configuration
