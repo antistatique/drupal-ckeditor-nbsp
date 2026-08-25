@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - feat: add logo.png for project browser
+- build: allow composer pluign symfony/runtime
 
 ## [3.1.2] - 2026-05-20
 ### Changed
