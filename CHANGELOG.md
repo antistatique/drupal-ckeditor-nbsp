@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ci(phpcs): exclude generated gitlab_templates_version.txt
 
 ### Added
+- feat: declare compatibility with Drupal 12
 - feat(tests): add PHPUnit attributes `#[Group]`, `#[CoversClass]` and `#[RunTestsInSeparateProcesses]`
 - feat: add official support of Drupal 10.6 and 11.3
 - feat: add experimental coverage of Drupal 11.4
