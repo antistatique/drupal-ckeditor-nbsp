@@ -5,19 +5,21 @@ declare(strict_types=1);
 namespace Drupal\nbsp\Plugin\Filter;
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\filter\Attribute\Filter;
 use Drupal\filter\FilterProcessResult;
 use Drupal\filter\Plugin\FilterBase;
+use Drupal\filter\Plugin\FilterInterface;
 
 /**
  * NBSP Cleaner Filter class. Implements process() method only.
- *
- * @Filter(
- *   id = "nbsp_cleaner_filter",
- *   title = @Translation("Cleanup NBSP markup"),
- *   description = @Translation("Replaces <code>&lt;nbsp&gt;&lt;/nbsp&gt;</code> tag with non-breaking space."),
- *   type = Drupal\filter\Plugin\FilterInterface::TYPE_TRANSFORM_IRREVERSIBLE,
- * )
  */
+#[Filter(
+  id: 'nbsp_cleaner_filter',
+  title: new TranslatableMarkup('Cleanup NBSP markup'),
+  description: new TranslatableMarkup('Replaces <code>&lt;nbsp&gt;&lt;/nbsp&gt;</code> tag with non-breaking space.'),
+  type: FilterInterface::TYPE_TRANSFORM_IRREVERSIBLE,
+)]
 class NbspCleanerFilter extends FilterBase {
 
   /**

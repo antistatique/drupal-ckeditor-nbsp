@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix: add 'codesniffer' to cspell ignore wordlist
 
 ### Changed
+- refactor(filter): replace plugin annotation with PHP attribute
 - ci(phpcs): exclude generated gitlab_templates_version.txt
 
 ### Added
