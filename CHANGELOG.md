@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - fix(ci): use the PHPMD 3 `analyze` command
+- fix: add 'codesniffer' to cspell ignore wordlist
 
 ### Changed
 - ci(phpcs): exclude generated gitlab_templates_version.txt
