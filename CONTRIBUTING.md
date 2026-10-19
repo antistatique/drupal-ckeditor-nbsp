@@ -119,7 +119,7 @@ https://github.com/phpmd/phpmd
 Detect overcomplicated expressions & Unused parameters, methods, properties.
 
   ```
-  $ docker compose exec drupal phpmd ./web/modules/contrib/nbsp/ text ./phpmd.xml \
+  $ docker compose exec drupal phpmd analyze ./web/modules/contrib/nbsp/ --ruleset ./phpmd.xml \
   --suffixes php,module,inc,install,test,profile,theme,css,info,txt --exclude *Test.php,*vendor/*,*node_modules/*
   ```
 
