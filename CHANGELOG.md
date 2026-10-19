@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ci(phpcs): exclude generated gitlab_templates_version.txt
 
 ### Added
+- feat: add official support of Drupal 10.6 and 11.3
 - feat: add logo.png for project browser
 - build: allow composer pluign symfony/runtime
 
