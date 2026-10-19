@@ -33,7 +33,7 @@ variables:
   OPT_IN_TEST_MAX_PHP: '1'
   # Opt in to testing previous minor (Drupal 11.1.x).
   OPT_IN_TEST_PREVIOUS_MINOR: '1'
-  # Opt in to testing minor (Drupal 11.3-dev).
+  # Opt in to testing minor (Drupal 11.4-dev).
   OPT_IN_TEST_NEXT_MINOR: '1'
   # Opt in to testing $CORE_PREVIOUS_MAJOR (currently Drupal 10.5.x).
   OPT_IN_TEST_PREVIOUS_MAJOR: '1'
