@@ -5,12 +5,19 @@ namespace Drupal\Tests\nbsp\Kernel;
 use Drupal\filter\FilterPluginCollection;
 use Drupal\filter\FilterProcessResult;
 use Drupal\KernelTests\KernelTestBase;
+use Drupal\nbsp\Plugin\Filter\NbspCleanerFilter;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * @coversDefaultClass \Drupal\nbsp\Plugin\Filter\NbspCleanerFilter
  *
  * @group nbsp
  */
+#[Group('nbsp')]
+#[CoversClass(NbspCleanerFilter::class)]
+#[RunTestsInSeparateProcesses]
 class NbspCleanerFilterTest extends KernelTestBase {
 
   /**
