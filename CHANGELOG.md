@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix: add 'codesniffer' to cspell ignore wordlist
 
 ### Changed
+- refactor(hooks): migrate hook_help to an OOP hook class
 - ci(upgrade-status): run on Drupal 11.3, as Drupal 10 lacks the PHPUnit attribute classes
 - refactor(filter): replace plugin annotation with PHP attribute
 - ci(phpcs): exclude generated gitlab_templates_version.txt
