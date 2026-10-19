@@ -6,6 +6,8 @@ use Drupal\editor\Entity\Editor;
 use Drupal\filter\Entity\FilterFormat;
 use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\Tests\ckeditor5\Traits\CKEditor5TestTrait;
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 /**
  * Ensure the NBSP CKeditor 5 dialog works.
@@ -13,6 +15,9 @@ use Drupal\Tests\ckeditor5\Traits\CKEditor5TestTrait;
  * @group nbsp
  * @group nbsp_functional
  */
+#[Group('nbsp')]
+#[Group('nbsp_functional')]
+#[RunTestsInSeparateProcesses]
 class DrupalCKEditor5NbspTest extends WebDriverTestBase {
 
   use CKEditor5TestTrait;
@@ -201,8 +206,6 @@ class DrupalCKEditor5NbspTest extends WebDriverTestBase {
 
   /**
    * Tests using Drupal Nbsp button to add non-breaking space into Link via Btn.
-   *
-   * @group kevin
    */
   public function testNbspInsideLinkTagWithButton() {
     $this->drupalGet('node/add/page');

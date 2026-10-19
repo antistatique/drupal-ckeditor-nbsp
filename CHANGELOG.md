@@ -6,14 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Fixed
+- fix(tests): remove stray `@group kevin` from the CKEditor 5 test
 - fix(ci): use the PHPMD 3 `analyze` command
 - fix: add 'codesniffer' to cspell ignore wordlist
 
 ### Changed
+- ci(upgrade-status): run on Drupal 11.3, as Drupal 10 lacks the PHPUnit attribute classes
 - refactor(filter): replace plugin annotation with PHP attribute
 - ci(phpcs): exclude generated gitlab_templates_version.txt
 
 ### Added
+- feat(tests): add PHPUnit attributes `#[Group]`, `#[CoversClass]` and `#[RunTestsInSeparateProcesses]`
 - feat: add official support of Drupal 10.6 and 11.3
 - feat: add experimental coverage of Drupal 11.4
 - feat: add logo.png for project browser
