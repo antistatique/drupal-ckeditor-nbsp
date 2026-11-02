@@ -18,16 +18,13 @@ interesed
 libbz
 Nettoye
 nonwords
-phpcf
 PHPCPD
 phpcpd
-phpdd
 Remplace
 rulesets
 stroustrup
 ulimits
 unusedcode
-wapmorgan
 Wenger
 wengerk
 dolo
