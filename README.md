@@ -31,26 +31,23 @@ Otherwise, add `<nbsp>` in the "allowed HTML tags" field.
 
 ## Which version should I use?
 
-NBSP is now available for both Drupal 8, Drupal 9 & Drupal 10!
+NBSP is available for Drupal 10.5+, Drupal 11 & Drupal 12!
 
 - if you are running Drupal `8.x`, use NBSP `8.x-2.0-alpha1`.
-- if you are running Drupal `9.x`, use NBSP `2.x`.
-- if you are running Drupal `10.x`, use NBSP `3.x`.
+- if you are running Drupal `9.x`, use NBSP `8.x-2.x`.
+- if you are running Drupal `10.5+`, `11.x` or `12.x`, use NBSP `3.1.x`.
 
-|     Drupal Core     | CKeditor |     NBSP     |
-|:-------------------:|:--------:|:------------:|
-|        8.7.x        |   4.x    |     1.x      |
-|        8.8.x        |   4.x    | 2.0.0-alpha1 |
-|        8.8.x        |   4.x    | 2.0.0-alpha1 |
-|         9.x         |   4.x    |   8.x-2.1    |
-|         9.x         |   5.x    |   8.x-2.2    |
-|        10.x         |   4.x    |   8.x-2.2    |
-|        10.x         |   5.x    |    3.0.x     |
-|      11.x-dev       |   5.x    |    3.0.x     |
+| Drupal Core | CKEditor |      NBSP      |
+|:-----------:|:--------:|:--------------:|
+|     8.x     |   4.x    | 8.x-2.0-alpha1 |
+|     9.x     | 4.x, 5.x |    8.x-2.x     |
+|    10.x     |   5.x    |      3.x       |
+|    11.x     |   5.x    |      3.x       |
+|    12.x     |   5.x    |     3.1.x      |
 
 ## Dependencies
 
-The Drupal 10 version of NBSP requires
+The Drupal 10, Drupal 11 & Drupal 12 versions of NBSP require
 [Editor](https://www.drupal.org/project/editor) and
 [CKEditor 5](https://ckeditor.com/ckeditor-5/).
 
